@@ -1,0 +1,41 @@
+<div *ngIf="this.loading != true">
+<div class="container-fluid w-50  p-5  mt-5 ">
+  <div class="card">
+    <div class="card-header text-white" style="background-color: #717272;">
+      <h3 class="mt-3">Edit Product Details</h3>
+    </div>
+    <div class="card-body">
+      <form class="w-100">
+        <div>
+          <label for="id">Id</label>
+          <input id="id" class="form-control" name="id" type="number" required [(ngModel)]="this.pro.id" />
+        </div>
+        <div>
+          <label for="title">Title</label>
+          <input id="title" class="form-control" name="title" type="text" required [(ngModel)]="this.pro.title" />
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <textarea id="description" class="form-control" name="description" type="text" required
+          [(ngModel)]="this.pro.description" rows="3" cols="5">                             
+          </textarea>
+          
+        </div>
+        <div>
+          <label for="price">Price</label>
+          <input id="price" class="form-control" name="price" type="text" required [(ngModel)]="this.pro.price" />
+        </div>
+        <div>
+          <label for="image">Image</label>
+          <input id="image" class="form-control" name="image" type="text" required [(ngModel)]="this.pro.image" />
+        </div>
+  
+        <div class="mt-3 d-flex justify-content-between">
+          <button type="button" class="btn btn-primary" (click)="submit()">Update</button>
+          <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

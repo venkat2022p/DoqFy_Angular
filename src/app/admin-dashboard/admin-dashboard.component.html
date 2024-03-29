@@ -1,0 +1,49 @@
+<div class="dashboard">
+    
+    <div class="mt-3 mb-4 d-flex justify-content-between ">
+      <div class="title ">Product List Dashboard</div>
+      <a  class="create-product text-decoration-none"(click)="createProduct()">Create Product</a>
+    </div>
+    <!-- <a routerLink="/product/create">Create</a> -->
+    <table class="table table-bordered border-primary">
+        <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+              <th scope="col">Image</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <th>{{product.id}}</th>
+              <td>{{product.title}}</td>
+              <td>{{product.description}}</td>
+              <td>USD:{{product.price}}</td>
+              <td> <img src="{{product.image}}" alt="">
+              </td>
+              <td>
+               
+                    <!-- <button type="button" class="btn btn-primary" (click)="editPostData(list.id)">Edit</button> -->
+                   <a routerLink="/products/{{product.id}}"><i class="bi bi-pencil text-decoration-none"></i></a>
+                   <a routerLink=""><i class="bi bi-trash text-decoration-none" (click)="deleteProductData(product.id)"></i></a>
+
+                   <!-- <i class="bi bi-pencil" (click)="editPostData(product.id)"></i> -->
+                <!-- <div *ngIf="isUpdateData">
+                    <button type="button" class="btn btn-success" (click)="upDatePostData()">Update</button><br>
+                </div>
+                <div *ngIf="isDeleteData">
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+                <div *ngIf="isCancelData">
+                    <button type="button" class="btn btn-info">Cancel</button>
+                </div> -->
+              </td>
+            </tr>
+         
+            
+          </tbody>
+      </table>
+</div>

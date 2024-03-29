@@ -1,0 +1,64 @@
+<!-- <div class=" ">
+  <div class="container w-50 card p-5  mt-5 border-0">
+    <div class=" mb-4 w-50">Create Product List</div>
+    <hr>
+
+    <form class="w-100">
+      <div>
+        <label for="title">Title</label>
+        <input id="title" class="form-control" name="title" type="text" required [(ngModel)]="title" />
+      </div>
+
+      <div>
+        <label for="description">Description</label>
+        <input id="description" class="form-control" name="description" type="text" required
+          [(ngModel)]="description" />
+      </div>
+      <div>
+        <label for="price">Price</label>
+        <input id="price" class="form-control" name="price" type="text" required [(ngModel)]="price" />
+      </div>
+      <div>
+        <label for="image">Image</label>
+        <input id="image" class="form-control" name="image" type="file" required [(ngModel)]="image" />
+      </div>
+      <div class="mt-3 d-flex justify-content-between">
+        <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+        <button type="button" class="btn btn-danger" (click)="submit()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div> -->
+<div class="container-fluid w-50  p-5  mt-5 ">
+  <div class="card">
+    <div class="card-header text-white" style="background-color: #717272;">
+      <h3 class="mt-3">Edit Product Details</h3>
+    </div>
+    <div class="card-body">
+      <form class="w-100">
+        <div>
+          <label for="title">Title</label>
+          <input id="title" class="form-control" name="title" type="text" required [(ngModel)]="title" />
+        </div>
+  
+        <div>
+          <label for="description">Description</label>
+          <textarea id="description" class="form-control" name="description" type="text" required
+          [(ngModel)]="description" cols="5" rows="5"></textarea>
+        </div>
+        <div>
+          <label for="price">Price</label>
+          <input id="price" class="form-control" name="price" type="text" required [(ngModel)]="price" />
+        </div>
+        <div>
+          <label for="image">Image</label>
+          <input id="image" class="form-control" name="image" type="file" required [(ngModel)]="image" />
+        </div>
+        <div class="mt-3 d-flex justify-content-between">
+          <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+          <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
